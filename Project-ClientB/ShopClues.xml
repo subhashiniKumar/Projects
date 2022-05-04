@@ -1,0 +1,29 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="ShopClues Testing" parallel="tests">
+<test name="Chrome-Test">
+  <parameter name="Browser" value="Chrome" ></parameter>
+  <parameter name="portURL" value="http://localhost:5555/wd/hub"> </parameter>
+  <groups>
+  <run>
+  <include name="Group1"></include>
+  <include name="Using Robot Class"></include>
+  </run>
+  </groups>
+  <classes>
+      <class name="testCases.ShopCluesTC"/>
+    </classes>
+  </test>
+  <test name="Firefox-Test">
+  <parameter name="Browser" value="Firefox" ></parameter>
+  <parameter name="portURL" value="http://localhost:5556/wd/hub"></parameter>
+  <groups>
+  <run>
+  <include name="Group1"></include>
+  <include name="Using Robot Class"></include>
+  </run>
+  </groups>
+  <classes>
+      <class name="testCases.ShopCluesTC"/>
+    </classes>
+  </test>
+</suite> 
